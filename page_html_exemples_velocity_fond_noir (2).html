@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VELOCITY — Exemples de décisions (version aérée)</title>
+  <meta name="description" content="Trois exemples fictifs orientés entreprises millionnaires. Mise en page verticale, aérée. Fond noir, texte blanc." />
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --muted: #c7c7c7;
+      --card: #0b0b0b;
+      --border: #222;
+      --positive: #42ffb3;
+      --negative: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.65;
+      letter-spacing: 0.2px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 6rem 1.25rem 4rem; display: grid; gap: 2.2rem; }
+    header h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0 0 .6rem; }
+    header p { margin: 0; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.125rem); }
+    .pill { display:inline-block; border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; color:var(--muted); font-size:.85rem; }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 1.6rem; }
+
+    .examples { display: grid; grid-template-columns: 1fr; gap: 1.4rem; }
+
+    .badge { display:inline-flex; align-items:center; gap:.45rem; font-size:.9rem; color:var(--muted); margin-bottom:.6rem; }
+    .dot { width:.5rem; height:.5rem; border-radius:999px; background: var(--muted); opacity:.7; }
+    .dot.go { background: var(--positive); }
+    .dot.nogo { background: var(--negative); }
+
+    .quote { margin: 0 0 1rem; color: var(--muted); font-style: italic; }
+
+    /* Mise en page 100% verticale, sans colonnes */
+    .stack { display: grid; grid-template-columns: 1fr; gap: .9rem; }
+
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; color: var(--muted); }
+    .kpi { font-size: clamp(1.1rem, 2.2vw, 1.4rem); margin: .25rem 0 0; }
+
+    .divider { height:1px; background: var(--border); margin: .8rem 0; border:0; }
+
+    .cta {
+      display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+      padding:1rem 1.35rem; border-radius:999px; color:var(--text); border:1px solid var(--text);
+      text-decoration:none; font-weight:600; transition: transform .08s ease, background .2s ease, color .2s ease;
+    }
+    .cta:hover { background: var(--text); color: var(--bg); transform: translateY(-1px); }
+    .cta:active { transform: translateY(0); opacity:.9; }
+
+    footer { border-top: 1px solid var(--border); margin-top: .5rem; padding-top: 1rem; color: var(--muted); font-size: .85rem; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="pill">VELOCITY</div>
+      <h1>Exemples</h1>
+      <p>Mise en page verticale, plus aérée. Chaque cas déroule la même structure : <strong>Décision</strong>, <strong>Raisonnement clé</strong>, <strong>Conséquence</strong>.</p>
+    </header>
+
+    <section class="examples">
+      <!-- Exemple 1 -->
+      <article class="card">
+        <div class="badge"><span class="dot go"></span> Demande 1</div>
+        <p class="quote">« Notre groupe e-commerce (CA 120 M€) hésite à investir 15 M€ dans un nouvel entrepôt automatisé qui pourrait réduire de 25% nos coûts logistiques (actuellement 20 M€/an). On décide ? »</p>
+        <div class="stack">
+          <div>
+            <div class="eyebrow">1. Décision / Go‑No Go</div>
+            <p class="kpi"><strong>Go</strong></p>
+          </div>
+          <hr class="divider"/>
+          <div>
+            <div class="eyebrow">2. Raisonnement clé</div>
+            <p class="kpi">Économie directe de <strong>5 M€ / an</strong>, ROI &lt; 3 ans.</p>
+          </div>
+          <hr class="divider"/>
+          <div>
+            <div class="eyebrow">3. Conséquence</div>
+            <p class="kpi">Hausse de marge nette + accélération livraison (avantage compétitif).</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Exemple 2 -->
+      <article class="card">
+        <div class="badge"><span class="dot go"></span> Demande 2</div>
+        <p class="quote">« Notre fintech (CA 80 M€, croissance 40%/an) envisage de dépenser 10 M€ en marketing TV pour accélérer sa notoriété et viser +20% de nouveaux clients (soit 200 000 comptes supplémentaires). Faut-il y aller ? »</p>
+        <div class="stack">
+          <div>
+            <div class="eyebrow">1. Décision / Go‑No Go</div>
+            <p class="kpi"><strong>No Go</strong></p>
+          </div>
+          <hr class="divider"/>
+          <div>
+            <div class="eyebrow">2. Raisonnement clé</div>
+            <p class="kpi">CAC TV ≈ <strong>50€ / client</strong> vs <strong>18€</strong> en digital.</p>
+          </div>
+          <hr class="divider"/>
+          <div>
+            <div class="eyebrow">3. Conséquence</div>
+            <p class="kpi">On protège le cash et on maintient une croissance rentable sans diluer la marge.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Exemple 3 -->
+      <article class="card">
+        <div class="badge"><span class="dot go"></span> Demande 3</div>
+        <p class="quote">« Notre groupe SaaS B2B (CA 200 M€, marge brute 75%) pense racheter une startup concurrente pour 60 M€. Elle fait 15 M€ de CA, en croissance 60%, mais encore -5 M€ de pertes. On achète ? »</p>
+        <div class="stack">
+          <div>
+            <div class="eyebrow">1. Décision / Go‑No Go</div>
+            <p class="kpi"><strong>Go</strong></p>
+          </div>
+          <hr class="divider"/>
+          <div>
+            <div class="eyebrow">2. Raisonnement clé</div>
+            <p class="kpi">Synergies immédiates (cross‑sell) estimées à <strong>+20 M€ de CA</strong> dès 2 ans.</p>
+          </div>
+          <hr class="divider"/>
+          <div>
+            <div class="eyebrow">3. Conséquence</div>
+            <p class="kpi">Accélère la domination du marché et bloque l’entrée d’un futur rival.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="card">
+      <h3 style="margin:.1rem 0 1rem">Prêt à trancher en 2 minutes&nbsp;?</h3>
+      <p style="margin:0 0 1rem; color: var(--muted);">Posez votre question maintenant. Réception sur un canal Telegram privé, <strong>2 minutes</strong> après paiement.</p>
+      <a class="cta" href="https://buy.stripe.com/14A5kCcsl9P7dj13TRcAo06" target="_blank" rel="noopener">Poser ma question — 1000&nbsp;€</a>
+    </section>
+
+    <footer>
+      <p>© <span id="y"></span> VELOCITY — Exemples de décisions. Tous droits réservés.</p>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
